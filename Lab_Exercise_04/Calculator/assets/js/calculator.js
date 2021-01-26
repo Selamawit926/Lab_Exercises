@@ -1,5 +1,5 @@
 
-while(true){
+
 let option=prompt("Do you want to add,subtract,multiply,divide,get the max, get the min,average, or square?");
 
 (function(){
@@ -127,4 +127,3 @@ function square(){
     return Math.square(parseInt(num));
 }
 
-}
