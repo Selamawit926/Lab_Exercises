@@ -1,37 +1,37 @@
 
 
-let option=prompt("Do you want to add,subtract,multiply,divide,get the max, get the min,average, or square?");
+let option=prompt("What operation would you like to perform? \n1. Add  \n2. Subtract  \n3. Multiply  \n4. Divide  \n5. Get the maximum  \n6. Get the minimum  \n7. Average  \n8. Square?");
 
 (function(){
-    if (option=="add"){
+    if (option=="1"){
         console.log(add())
      }
     
-     if (option=="sub"){
+     if (option=="2"){
         console.log(sub())
      }
     
-    else if (option=="mul"){
+    else if (option=="3"){
         console.log(mul())
      }
     
-    else if (option=="div"){
+    else if (option=="4"){
         console.log(div())
      }
     
-     else if (option=="max"){
+     else if (option=="5"){
         console.log(max())
      }
     
-    else if (option=="min"){
+    else if (option=="6"){
         console.log(min())
     }
 
-    else if (option=="avg"){
+    else if (option=="7"){
         console.log(average())
     }
 
-    else if (option=="sq"){
+    else if (option=="8"){
         console.log(square())
     }
      
