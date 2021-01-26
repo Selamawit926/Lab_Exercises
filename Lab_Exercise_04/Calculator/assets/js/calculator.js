@@ -1,4 +1,6 @@
-let option=prompt("Do you want to add,subtract,multiply,divide?");
+
+while(true){
+let option=prompt("Do you want to add,subtract,multiply,divide,get the max, get the min,average, or square?");
 
 (function(){
     if (option=="add"){
@@ -17,6 +19,21 @@ let option=prompt("Do you want to add,subtract,multiply,divide?");
         console.log(div())
      }
     
+     else if (option=="max"){
+        console.log(max())
+     }
+    
+    else if (option=="min"){
+        console.log(min())
+    }
+
+    else if (option=="avg"){
+        console.log(average())
+    }
+
+    else if (option=="sq"){
+        console.log(square())
+    }
      
 })();
 
@@ -68,4 +85,46 @@ function div(){
         return "Undefined"
     }
     
+}
+
+function  max(){
+    let num=prompt("Enter how many numbers you want the maximum of");
+    adding=[]
+    for (let i = 0; i < parseInt(num); i++) {
+        adding[i] = parseInt(prompt("Enter numbers:"));
+    }
+    return Math.max(adding)
+}
+
+function min(){
+    let num=prompt("Enter how many numbers you want the minimum of");
+    adding=[]
+    for (let i = 0; i < parseInt(num); i++) {
+        adding[i] = parseInt(prompt("Enter numbers:"));
+    }
+    return Math.min(adding)
+}
+
+function average(){
+    let num=prompt("Enter how many numbers you want the average of");
+    adding=[]
+    for (let i = 0; i < parseInt(num); i++) {
+        adding[i] = parseInt(prompt("Enter numbers:"));
+    }
+
+    tot=0
+    for (let i=0;i<adding.length;i++){
+        tot=tot+adding[i]
+    }
+    
+    avg=tot/adding.length 
+    return avg
+
+}
+
+function square(){
+    let num=prompt("Enter a number you want the square of");
+    return Math.square(parseInt(num));
+}
+
 }
