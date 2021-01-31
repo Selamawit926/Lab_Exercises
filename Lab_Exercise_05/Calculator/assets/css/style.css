@@ -1,0 +1,42 @@
+
+
+#btn{
+    height: 50px;
+    width: 70px;
+    border-radius: 30%;
+    background-color: rgb(129, 230, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.con{
+    margin-top: 200px;
+    background-color: rgb(253, 255, 255);
+}
+
+.input{
+    width: 380px;
+    height: 130px;
+    border-radius: 10%;
+    background-color: rgb(214, 214, 214);
+}
+
+.row{
+    margin-top: 20px;
+    padding-left: 100px;
+}
+/* .col{
+    background-color: aqua;
+
+}
+
+.col1{
+    background-color: rgb(76, 0, 255);
+}
+
+.col2{
+    background-color: rgb(145, 255, 0);
+}
+
+.col3{
+    background-color: rgb(255, 115, 0);
+} */

@@ -47,7 +47,9 @@ function dropdown(){
 
     });
 
+   div.style.listStyleType="none";
     title.appendChild(div);
+
     if (div.style.display=="block"){
         div.style.display="none";
     }
@@ -56,8 +58,6 @@ function dropdown(){
     }
     
    
-
-    
 
 }
 
