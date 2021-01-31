@@ -21,6 +21,19 @@ filter.addEventListener('keyup', filterTasks);
 taskList.addEventListener('click', removeTask);
 
 reloadIcon.addEventListener('click', reloadPage);
+const title=document.getElementById("task-title");
+const drop= document.createElement('a');
+drop.className='drop-down';
+drop.innerHTML='<i class="fa fa-caret-down"></i>';
+drop.style.position="right";
+drop.style.cursor="pointer";
+title.appendChild(drop);
+
+
+function dropdown(){
+    
+}
+
 
 
 // Add New  Task Function definition 
@@ -93,19 +106,7 @@ function filterTasks(e) {
         
 
     });
-    // for (i=0;i<arr.length;i++){
-    //    let single=arr[i].getElementsByTagName("li")[0];
-    //    let txt=single.textContent;
-    //    if(txt.indexOf(filter)>-1){
-    //        arr[i].style.display="";
-    //    }
-    //    else{
-    //        arr[i].style.display="none";
-    //    }
-
-    // }
-
-
+  
 
 }
  
