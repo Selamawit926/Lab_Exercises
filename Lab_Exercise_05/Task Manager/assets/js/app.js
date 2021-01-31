@@ -21,6 +21,8 @@ filter.addEventListener('keyup', filterTasks);
 taskList.addEventListener('click', removeTask);
 
 reloadIcon.addEventListener('click', reloadPage);
+
+
 const title=document.getElementById("task-title");
 const drop= document.createElement('a');
 drop.className='drop-down';
@@ -29,9 +31,34 @@ drop.style.position="right";
 drop.style.cursor="pointer";
 title.appendChild(drop);
 
+drop.addEventListener("click",dropdown);
+
+const div=document.createElement("div");
+div.style.display="none";
 
 function dropdown(){
+
+    const arr=document.querySelectorAll(".collection-item");
     
+
+    arr.forEach(function(word){
+
+        div.appendChild(word);
+
+    });
+
+    title.appendChild(div);
+    if (div.style.display=="block"){
+        div.style.display="none";
+    }
+    else{
+        div.style.display="block";
+    }
+    
+   
+
+    
+
 }
 
 
