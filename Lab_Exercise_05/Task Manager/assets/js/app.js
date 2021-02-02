@@ -24,16 +24,17 @@ reloadIcon.addEventListener('click', reloadPage);
 
 
 const title=document.getElementById("task-title");
-const drop= document.createElement('a');
-drop.className='drop-down';
-drop.innerHTML='<i class="fa fa-caret-down"></i>';
-drop.style.position="right";
+const drop= document.getElementById("drop");
+// drop.className='drop-down';
+// drop.innerHTML='<i class="fa fa-caret-down"></i>';
+// drop.style.position="right";
+// drop.style.marginLeft="1200px";
 drop.style.cursor="pointer";
-title.appendChild(drop);
+// title.appendChild(drop);
 
 drop.addEventListener("click",dropdown);
 
-const div=document.createElement("div");
+const div=document.getElementById("div");
 div.style.display="none";
 
 function dropdown(){
@@ -43,12 +44,18 @@ function dropdown(){
 
     arr.forEach(function(word){
 
+        const link=document.getElementById("delete");
+        // word.removeChild(link);
+        word.style.textAlign="right";
+        word.style.fontSize="25px";
         div.appendChild(word);
+       
 
     });
 
    div.style.listStyleType="none";
-    title.appendChild(div);
+   div.style.marginTop="50px";
+//    div.innerHTML.style.textAlign="right";
 
     if (div.style.display=="block"){
         div.style.display="none";
@@ -56,8 +63,7 @@ function dropdown(){
     else{
         div.style.display="block";
     }
-    
-   
+
 
 }
 
@@ -84,6 +90,7 @@ function addNewTask(e) {
     const link = document.createElement('a');
     // Add class and the x marker for a 
     link.className = 'delete-item secondary-content';
+    link.id='delete';
     link.innerHTML = '<i class="fa fa-remove"></i>';
     // Append link to li
     li.appendChild(link);

@@ -1,3 +1,8 @@
 i {
     color: red;
 }
+
+.drop{
+    float: right;
+    font-size: 30px;
+}
