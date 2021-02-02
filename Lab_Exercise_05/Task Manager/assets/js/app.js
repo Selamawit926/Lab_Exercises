@@ -25,6 +25,7 @@ reloadIcon.addEventListener('click', reloadPage);
 
 const title=document.getElementById("task-title");
 const drop= document.getElementById("drop");
+const up=document.getElementById("dropup");
 // drop.className='drop-down';
 // drop.innerHTML='<i class="fa fa-caret-down"></i>';
 // drop.style.position="right";
@@ -33,39 +34,80 @@ drop.style.cursor="pointer";
 // title.appendChild(drop);
 
 drop.addEventListener("click",dropdown);
+up.addEventListener("click",dropdown1);
 
-const div=document.getElementById("div");
-div.style.display="none";
+// const div=document.getElementById("div");
+// div.style.display="none";
+// up.style.display="none";
 
 function dropdown(){
 
     const arr=document.querySelectorAll(".collection-item");
-    
+    let values=[];
 
     arr.forEach(function(word){
-
-        const link=document.getElementById("delete");
-        // word.removeChild(link);
-        word.style.textAlign="right";
-        word.style.fontSize="25px";
-        div.appendChild(word);
-       
-
+        values.push(word.value);
     });
 
-   div.style.listStyleType="none";
-   div.style.marginTop="50px";
-//    div.innerHTML.style.textAlign="right";
+    values.sort();
 
-    if (div.style.display=="block"){
-        div.style.display="none";
-    }
-    else{
-        div.style.display="block";
-    }
 
+    for (let i = 0; i < values.length; i++) {
+        arr.forEach(function (word) {
+            if (values[i] == word.value) {
+            taskList.appendChild(word);
+            }
+        });
+        }
 
 }
+    
+function dropdown1(){
+    const arr=document.querySelectorAll(".collection-item");
+    let values=[];
+
+    arr.forEach(function(word){
+        values.push(word.value);
+    });
+
+    values.sort();
+
+
+    for (let i = values.length; i >= 0; i--) {
+    arr.forEach(function (word) {
+        if (values[i] == word.value) {
+        taskList.appendChild(word);
+        }
+    });
+    }
+
+}
+
+
+//     arr.forEach(function(word){
+
+//         const link=document.getElementById("delete");
+//         // word.removeChild(link);
+//         word.style.textAlign="right";
+//         word.style.fontSize="25px";
+//         div.appendChild(word);
+       
+
+//     });
+
+//    div.style.listStyleType="none";
+//    div.style.marginTop="50px";
+// //    div.innerHTML.style.textAlign="right";
+
+//     if (div.style.display=="block"){
+//         div.style.display="none";
+//     }
+//     else{
+//         div.style.display="block";
+// 
+
+
+
 
 
 
@@ -85,9 +127,12 @@ function addNewTask(e) {
     // Adding a class
     li.className = 'collection-item';
     // Create text node and append it 
+    li.value = new Date().getTime();
     li.appendChild(document.createTextNode(taskInput.value));
+    
     // Create new element for the link 
     const link = document.createElement('a');
+
     // Add class and the x marker for a 
     link.className = 'delete-item secondary-content';
     link.id='delete';
