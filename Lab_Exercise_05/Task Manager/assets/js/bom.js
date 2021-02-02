@@ -13,39 +13,22 @@ Good Luck !!!
 
 
 // Define UI Variables  here 
-
-const href= document.querySelector("#href");
-const protocol= document.querySelector("#protocol");
-const host= document.querySelector("#host");
-const port= document.querySelector("#port");
-const hostname= document.querySelector("#hostname");
-const appname= document.querySelector("#appname");
-const appversion= document.querySelector("#appversion");
-const platform= document.querySelector("#platform");
-const language= document.querySelector("#language");
-const cookieEnabled= document.querySelector("#cookieEnabled");
-const height= document.querySelector("#pheight");
-const width= document.querySelector("#width");
-const pixelDepth= document.querySelector("#pixelDepth");
-const length= document.querySelector("#length");
-const state= document.querySelector("#state");
-
-
+const arr=document.querySelectorAll(".collection-item");
 
 // Display the BOM Information on the innerHTML of the elements
 
-href.innerHTML = window.location.href;
-protocol.innerHTML = window.location.protocol;
-host.innerHTML = window.location.host;
-port.innerHTML = window.location.port;
-hostname.innerHTML = window.location.hostname;
-appname.innerHTML = window.navigator.appName;
-appversion.innerHTML = window.navigator.appVersion;
-platform.innerHTML = window.navigator.platform;
-language.innerHTML = window.navigator.language;
-cookieEnabled.innerHTML = window.navigator.cookieEnabled;
-height.innerHTML = window.screen.height;
-width.innerHTML = window.screen.width;
-pixelDepth.innerHTML = window.screen.pixelDepth;
-length.innerHTML = window.history.length;
-state.innerHTML = window.history.state;
+arr[0].innerHTML = window.location.href;
+arr[1].innerHTML = window.location.protocol;
+arr[2].innerHTML = window.location.host;
+arr[3].innerHTML = window.location.port;
+arr[4].innerHTML = window.location.hostname;
+arr[5].innerHTML = window.navigator.appName;
+arr[6].innerHTML = window.navigator.appVersion;
+arr[7].innerHTML = window.navigator.platform;
+arr[8].innerHTML = window.navigator.language;
+arr[9].innerHTML = window.navigator.cookieEnabled;
+arr[10].innerHTML = window.screen.height;
+arr[11].innerHTML = window.screen.width;
+arr[12].innerHTML = window.screen.pixelDepth;
+arr[13].innerHTML = window.history.length;
+arr[14].innerHTML = window.history.state;
