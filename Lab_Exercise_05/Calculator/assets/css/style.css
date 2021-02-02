@@ -3,7 +3,8 @@
     height: 50px;
     width: 70px;
     border-radius: 30%;
-    background-color: rgb(157, 235, 255);
+    background-color: rgb(58, 58, 58);
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 } 
 
@@ -13,29 +14,41 @@
 }
 
 .input1{
-    width: 380px;
+    width:480px;
     height: 130px;
     border-radius: 10%;
-    background-color: rgb(228, 228, 228);
+    
+    /* margin-left: 320px; */
+    border: black solid 3px;
+    background-color: rgb(255, 255, 255);
 }
 
-.input1 h1{
+h1{
     padding-top: 70px;
     text-align: end;
     font-size: 40px;
 }
 
+.col11{
+    background-color: rgb(255, 255, 255);
+    border: black solid 2px;
+    height: 120px;
+    border-radius: 5%;
+}
+
 .row{
     margin-top: 20px;
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
 /* .col{
     background-color: aqua;
+
 
 }
 
 .col1{
     background-color: rgb(76, 0, 255);
+    text-align: center;
 }
 
 .col2{
