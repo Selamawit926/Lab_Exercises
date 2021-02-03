@@ -113,6 +113,10 @@ function disDiv(){
   
 }
 
+function disDec(){
+    holder.innerHTML+="."
+}
+
 function disClear(){
     holder.innerHTML="";
   
@@ -157,6 +161,7 @@ function result(){
         }
 
         else{
+
             if (holder.innerHTML[i]=="+"){
                 tot+=parseInt(store);
                 count+=1;
@@ -165,6 +170,7 @@ function result(){
             else if(holder.innerHTML[i]="*"){
                 tot1*=parseInt(store);
             }
+
             store2=store;
             store="";
             op=holder.innerHTML[i];

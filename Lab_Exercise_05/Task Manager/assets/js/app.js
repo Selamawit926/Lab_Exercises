@@ -169,19 +169,19 @@ function filterTasks(e) {
         // console.log(word.textContent.length);
         // console.log(filter.value.length);
         
-        for (i=0;i<filter.value.length;i++){
+        
        
-            if (word.textContent.indexOf(filter.value)>-1){
-                word.style.display="block";
-                // console.log(true);
-                // console.log(word.textContent[i]);
-                
-            }
-            else{
-                word.style.display="none";
-                // console.log(word.textContent);
-            }
+        if (word.textContent.indexOf(filter.value)>-1){
+            word.style.display="block";
+            // console.log(true);
+            // console.log(word.textContent[i]);
+            
         }
+        else{
+            word.style.display="none";
+            // console.log(word.textContent);
+        }
+        
         
 
     });
