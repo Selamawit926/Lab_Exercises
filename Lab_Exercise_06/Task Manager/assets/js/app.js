@@ -112,12 +112,12 @@ function displayTaskList() {
 
             link.innerHTML = `
             <i class="fa fa-remove"></i>  &nbsp;
-           <a href="/../edit.html?id=${cursor.value.id}"><i class="fa fa-edit"></i> </a> `;
-           
+           <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit"></i> </a> ;
+           `
             // Add class and the x marker for a 
             link.className = 'delete-item secondary-content';
             link.id='delete';
-            link.innerHTML = '<i class="fa fa-remove"></i>';
+            // link.innerHTML = '<i class="fa fa-remove"></i>';
             // Append link to li
             li.appendChild(link);
             // Append to ul 
