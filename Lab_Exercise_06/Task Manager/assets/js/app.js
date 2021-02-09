@@ -66,7 +66,8 @@ function addNewTask(e) {
 
   // create a new object with the form info
   let newTask = {
-      taskname: taskInput.value
+      taskname: taskInput.value,
+      date: newDate(),
   }
   // Insert the object into the database 
   let transaction = DB.transaction(['tasks'], 'readwrite');
@@ -111,6 +112,7 @@ function displayTaskList() {
             const link = document.createElement('a');
 
             link.innerHTML = `
+            <span style = "margin-right:240px; color:#000">${cursor.value.date.toString()}</span>
             <i class="fa fa-remove"></i>  &nbsp;
            <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit"></i> </a> ;
            `
