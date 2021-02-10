@@ -12,6 +12,59 @@ const reloadIcon = document.querySelector('.fa');
 
 let DB;
 
+const drop= document.getElementById("drop");
+const dropup=document.getElementById("dropup");
+let tasks=[];
+drop.addEventListener("click",sort2);
+dropup.addEventListener("click",sort);
+
+function sort2(){
+    let sortedTask;
+    sortedTask = tasks.sort(function (task1, task2) {
+        return task1.date - task2.date;
+        });
+
+    displayFilter(sortedTask);
+};
+
+function sort(){
+    let sortedTask;
+    sortedTask = tasks.sort(function (task1, task2) {
+        return task2.date.getTime() - task1.date.getTime();
+        });
+
+    displayFilter(sortedTask);
+};
+
+const displayFilter = function (tasks) {
+    taskList.innerHTML = "";
+    tasks.forEach((task, index) => {
+      const li = document.createElement("li");
+      //add Attribute for delete
+      li.setAttribute("data-task-id", index + 1);
+      // Adding a class
+      li.className = "collection-item";
+      // Create text node and append it
+      li.appendChild(document.createTextNode(task.taskname));
+      // Create new element for the link
+      const link = document.createElement("a");
+      // Add class and the x marker for a
+      link.className = "delete-item secondary-content";
+      link.innerHTML = `
+                <span style = "margin-right:240px; color:#000">${task.date.toString()}</span>
+                 <i class="fa fa-remove"></i>
+                &nbsp;
+                <a href="edit.html?id=${
+                  index + 1
+                }"><i class="fa fa-edit"></i> </a>
+                ;`
+      // Append link to li
+      li.appendChild(link);
+      // Append to UL
+      taskList.appendChild(li);
+    });
+  };
+
 form.addEventListener("click",addNewTask);
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -97,8 +150,14 @@ function displayTaskList() {
         // assign the current cursor
         let cursor = e.target.result;
 
+        
         if (cursor) {
-
+            let newTask = {
+                taskname: cursor.value.taskname,
+                date: cursor.value.date,
+              };
+      
+            tasks.push(newTask);
             const li = document.createElement('li');
            // Adding a class
             li.className = 'collection-item';
@@ -118,7 +177,7 @@ function displayTaskList() {
            `
             // Add class and the x marker for a 
             link.className = 'delete-item secondary-content';
-            link.id='delete';
+            // link.id='delete';
             // link.innerHTML = '<i class="fa fa-remove"></i>';
             // Append link to li
             li.appendChild(link);

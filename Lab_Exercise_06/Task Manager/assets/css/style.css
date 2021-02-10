@@ -5,5 +5,14 @@ i {
 .drop{
     float: right;
     font-size: 30px;
+    cursor: pointer;
 }
 
+/* .dropdown{
+    float: right;
+}
+
+.content{
+    display: none;
+    cursor: pointer;
+} */
