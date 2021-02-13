@@ -12,11 +12,57 @@ const reloadIcon = document.querySelector('.fa');
 
 let DB;
 
+form.addEventListener("click",addNewTask);
+
 const drop= document.getElementById("drop");
 const dropup=document.getElementById("dropup");
 let tasks=[];
 drop.addEventListener("click",sort2);
 dropup.addEventListener("click",sort);
+
+
+// const drop= document.getElementById("drop");
+// const main= document.getElementById("main");
+// const main2= document.getElementById("main2");
+// const dropped=document.getElementById("dropped");
+
+// drop.addEventListener("click",dropdown);
+// dropped.addEventListener("click",change);
+
+// function dropdown(){
+//     if (dropped.style.display=="none"){
+//         dropped.style.display="block";
+
+//     }
+//     else{
+//         dropped.style.display="none";
+//     }
+// }
+
+// function change(){
+//     if (main2.innerHTML=="Descending"){
+//         let sortedTask;
+//     sortedTask = tasks.sort(function (task1, task2) {
+//         return task1.date - task2.date;
+//         });
+
+//     main2.innerHTML="Ascending";
+//     main.innerHTML="Descending";
+//     displayAgain(sortedTask);
+//     }
+
+//     else{
+//         let sortedTask;
+//         sortedTask = tasks.sort(function (task1, task2) {
+//         return task2.date.getTime() - task1.date.getTime();
+//         });
+
+//     main2.innerHTML="Descending";
+//     main.innerHTML="Ascending";
+//     displayAgain(sortedTask);
+//     }
+// }
+
 
 function sort2(){
     let sortedTask;
@@ -24,7 +70,7 @@ function sort2(){
         return task1.date - task2.date;
         });
 
-    displayFilter(sortedTask);
+    displayAgain(sortedTask);
 };
 
 function sort(){
@@ -33,10 +79,10 @@ function sort(){
         return task2.date.getTime() - task1.date.getTime();
         });
 
-    displayFilter(sortedTask);
+    displayAgain(sortedTask);
 };
 
-const displayFilter = function (tasks) {
+const displayAgain = function (tasks) {
     taskList.innerHTML = "";
     tasks.forEach((task, index) => {
       const li = document.createElement("li");
@@ -120,7 +166,7 @@ function addNewTask(e) {
   // create a new object with the form info
   let newTask = {
       taskname: taskInput.value,
-      date: newDate(),
+      date: new Date(),
   }
   // Insert the object into the database 
   let transaction = DB.transaction(['tasks'], 'readwrite');
@@ -171,7 +217,7 @@ function displayTaskList() {
             const link = document.createElement('a');
 
             link.innerHTML = `
-            <span style = "margin-right:240px; color:#000">${cursor.value.date.toString()}</span>
+            <span style = "margin-right:240px; color:#000">${cursor.value.date}</span>
             <i class="fa fa-remove"></i>  &nbsp;
            <a href="edit.html?id=${cursor.value.id}"><i class="fa fa-edit"></i> </a> ;
            `
