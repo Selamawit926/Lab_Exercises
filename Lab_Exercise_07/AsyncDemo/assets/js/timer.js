@@ -28,6 +28,3 @@ function addZero(i) {
 
 }
 
-window.onload=function(){
-    startTime();
-};

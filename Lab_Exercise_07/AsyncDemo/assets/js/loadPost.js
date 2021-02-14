@@ -55,6 +55,3 @@ function loadPost() {
     xhr.send();
 }
 
-(function(){
-    loadPost();
-})();
