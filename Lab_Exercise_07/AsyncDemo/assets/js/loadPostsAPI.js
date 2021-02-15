@@ -3,10 +3,6 @@ const postDiv3 = document.getElementById('thePosts');
 const spin= document.getElementById("spin");
 
 
-function spinDis(){
-    spin.style.display="none";
-}
-
 //Load Every thing ....
 document.addEventListener("DOMContentLoaded", () => {
     // load_fromPlaceHolder();

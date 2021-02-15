@@ -1,0 +1,47 @@
+
+body{
+    background-color: black;
+}
+
+.col{
+    background-image: url("../images/image.JPG");
+    width: 400px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hour {
+    width: 3px;
+    position: absolute;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 100px solid green;
+    background-color: transparent;
+    top: 330px;
+    left: 565px;
+    
+  }
+
+  .min {
+    width: 3px;
+    /* height: 10px; */
+    position: absolute;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 180px solid blue;
+    background-color: transparent;
+    left: 565px;
+    top: 250px;
+  }
+
+  .second{
+    width: 1px;
+    position: absolute;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 180px solid red;
+    background-color: transparent;
+    top: 250px;
+    left: 565px;
+  }
