@@ -5,7 +5,8 @@ body{
 
 .col{
     background-image: url("../images/image.JPG");
-    width: 400px;
+    /* background-color: blueviolet; */
+    /* width: 400px; */
     height: 800px;
     background-repeat: no-repeat;
     background-position: center;
@@ -16,32 +17,60 @@ body{
     position: absolute;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    border-bottom: 100px solid green;
+    border-bottom: 100px solid rgb(0, 0, 0);
     background-color: transparent;
-    top: 330px;
+    top: 310px;
     left: 565px;
-    
+    transform: rotate(90deg);
+    transform-origin: bottom;
   }
 
   .min {
     width: 3px;
     /* height: 10px; */
+    /* margin: auto; */
     position: absolute;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    border-bottom: 180px solid blue;
+    border-bottom: 140px solid rgb(126, 225, 255);
     background-color: transparent;
     left: 565px;
-    top: 250px;
+    top: 275px;
+    /* transform: rotate(6deg); */
+    /* margin-top: 250px; */
+    transform: rotate(42deg);
+    transform-origin: bottom;
   }
 
   .second{
     width: 1px;
+    /* margin: auto; */
     position: absolute;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
-    border-bottom: 180px solid red;
+    border-bottom: 150px solid rgb(255, 255, 255);
     background-color: transparent;
-    top: 250px;
     left: 565px;
+    top: 263px;
+    /* margin-top: 250px; */
+    /* margin-left: 550px; */
+    
+    /* transform: translate(-50%,-50%); */
+    /* transform: rotate(60deg); */
+    /* position: center; */
+    /* text-align: center; */
+    transform-origin: bottom ;
+    /* position: 50% 50%; */
+    
+  
+  }
+
+  .mid{
+      width: 15px;
+      height:13px;
+      border-radius: 40%;
+      background-color: black;
+      position: absolute;
+      left: 562px;
+      top: 408px;
   }
