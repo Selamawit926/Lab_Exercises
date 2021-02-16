@@ -38,7 +38,7 @@ body{
     top: 275px;
     /* transform: rotate(6deg); */
     /* margin-top: 250px; */
-    transform: rotate(42deg);
+    transform: rotate(28deg);
     transform-origin: bottom;
   }
 
@@ -73,4 +73,14 @@ body{
       position: absolute;
       left: 562px;
       top: 408px;
+  }
+
+  .con{
+    margin-top: 300px;
+    
+  }
+
+  .img{
+    height: 300px;
+    width: 400px;
   }
