@@ -1,6 +1,6 @@
 // UI Vars 
 const postDiv2 = document.getElementById('myPosts');
-
+const inp=document.getElementById("input");
 
 
 //load a single customer function 

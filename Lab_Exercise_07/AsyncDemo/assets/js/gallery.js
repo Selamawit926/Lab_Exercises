@@ -1,7 +1,9 @@
 const display= document.getElementById("carousel");
 const slide=document.getElementById("slide");
-
-document.addEventListener("DOMContentLoaded",displaySlide);
+document.addEventListener("DOMContentLoaded",()=>{
+    displaySlide();
+    
+});
 
 
 function displaySlide(){
@@ -13,6 +15,7 @@ function displaySlide(){
     .then(function(posts) {
         //iterate over each post [100 posts]
         let output = '';
+
        
         posts.forEach(function(post) {
 
